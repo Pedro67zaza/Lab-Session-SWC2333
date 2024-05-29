@@ -1,0 +1,28 @@
+
+/**
+ * Demonstrates the usage of scanner class
+ *
+ * @author (Afizudin Firdaus)
+ * @version (29th May 2024)
+ */
+import java.util.Scanner;
+public class ScannerPersonalInfo
+{
+   public static void main(String[]args)
+   {    //Declare all variables
+       String name, hobby, homeTown;
+       
+       Scanner checker = new Scanner(System.in);
+       
+       System.out.println("What is your name?");//prompt the user for name
+       name = checker.nextLine();
+       System.out.println("What is your hobby?");//prompt the user for hobby
+       hobby = checker.nextLine();
+       System.out.println("Where is your hometown?");//prompt the user for hometown
+       homeTown = checker.nextLine();
+       
+       //Greet the user 
+       System.out.println("Hello " + name + " \nYour hobby is " + hobby + " \nYou're from " + homeTown);
+       checker.close();
+   }
+}
