@@ -1,0 +1,34 @@
+
+/**
+ * Program purpose: To demonstrates the usage of scanner class
+ *
+ * @author (Afizudin Firdaus)
+ * @version (29th May 2024)
+ */
+import java.util.Scanner;
+public class ScannerMyDetails
+{
+    public static void main(String[]args)
+    {   //declare all variables
+        String name, input;
+        int age;
+        double income;
+        
+        Scanner checker = new Scanner(System.in);
+        
+        System.out.println("What is your name?");//prompt the user for name
+        name = checker.nextLine();
+        System.out.println("What is your age?");//prompt the user for age
+        input = checker.nextLine();
+        
+        age = Integer.parseInt(input);//convert the input to an int
+        
+        System.out.println("What is your income?");//prompt the user for income
+        input = checker.nextLine();
+        
+        income = Double.parseDouble(input);//convert the input to a double
+
+        System.out.println("Hello " + name + " \nYou are " + age + " years old" +" \nYou earn RM" + income + " a year.");//greet the user 
+        checker.close();
+    }
+}
