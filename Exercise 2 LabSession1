@@ -1,0 +1,19 @@
+
+/**
+ * Program Purpose: Displays message using JOptionPane
+ *
+ * @author (Afizudin Firdaus)
+ * @version (29th May 2024)
+ */
+import javax.swing.JOptionPane;
+
+public class MyPROG2
+{
+    public static void main(String[]args)
+    {
+        JOptionPane.showMessageDialog(null,"Hello World!",null, 2);
+        JOptionPane.showMessageDialog(null,"My first JAVA Programming","Java", 1);
+        JOptionPane.showMessageDialog(null,"My name is Afi!, I am from CC101", "Self Introduction", 1);
+        System.exit(0);
+    }
+}
