@@ -1,0 +1,17 @@
+
+/**
+ * Program Purpose: To utilize print() and println()
+ *
+ * @author (Afizudin firdaus)
+ * @version (29th May 2024)
+ */
+//This is another simple JAVA Program
+public class Lines
+{
+    public static void main(String[]args)
+    {
+        System.out.println("Programming is great fun!"); //using println
+        System.out.print("JAVA is great "); //using print
+        System.out.println("and I love JAVA");
+    }
+}
