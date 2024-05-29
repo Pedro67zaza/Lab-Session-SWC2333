@@ -1,0 +1,29 @@
+
+/**
+ * Program purpose: To demonstrates using dialogs using JOptionPane
+ *
+ * @author (Afizudin Firdaus)
+ * @version (29th May 2024)
+ */
+import javax.swing.JOptionPane;
+public class MyDetails
+{
+    public static void main(String[]args)
+    {   //declare all variables
+        String name, input;
+        int age;
+        double income;
+        
+        name = JOptionPane.showInputDialog("What is your name?");//prompt the user for name
+        input = JOptionPane.showInputDialog("What is your age?");//prompt the user for age
+        
+        age = Integer.parseInt(input);//convert the input to an int
+        
+        input = JOptionPane.showInputDialog("What is your income?");//prompt the user for income
+        
+        income = Double.parseDouble(input);//convert the input to a double
+
+        JOptionPane.showMessageDialog(null,"Hello " + name + " \nYou are " + age + " years old" +" \nYou earn RM" + income + " a year.");//greet the user 
+        System.exit(0);
+    }
+}
