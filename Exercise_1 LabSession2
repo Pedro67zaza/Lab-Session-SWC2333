@@ -1,0 +1,24 @@
+
+/**
+ * Demonstrates using dialogs with JOptionPane.
+ *
+ * @author (Afizudin Firdaus)
+ * @version (29th May 2024)
+ */
+import javax.swing.JOptionPane;
+public class PersonalInfo
+{
+   public static void main(String[]args)
+   {    //Declare all variables
+       String name, hobby, homeTown;
+       
+       name = JOptionPane.showInputDialog("What is your name?");//prompt the user for name
+       hobby = JOptionPane.showInputDialog("What is your hobby?");//prompt the user for hobby
+       homeTown = JOptionPane.showInputDialog("Where is your hometown?");//prompt the user for hometown
+       
+       //Greet the user 
+       JOptionPane.showMessageDialog(null,"Hello " + name + " \nYour hobby is " + hobby + " \nYou're from " + homeTown);
+       System.exit(0);
+       
+   }
+}
