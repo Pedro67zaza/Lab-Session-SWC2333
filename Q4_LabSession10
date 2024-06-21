@@ -1,0 +1,72 @@
+
+/**
+ * Program purpose: To calculate and display the results for the balance of the savings account
+ *
+ * @author (AFIZUDIN FIRDAUS)
+ * @version (DATE: 21/6/2024)
+ */
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.lang.Math;
+
+public class SavingsCalc extends JFrame implements ActionListener
+{
+   private JLabel lblAmount, lblInterest, lblYear;
+   private JTextField txtAmount, txtInterest, txtYear, txtBalance;
+   private JButton btnCalc;
+   private FlowLayout layout;
+   private Container cont;
+   //Set up GUI
+   public SavingsCalc() {
+       super("The Savings Account Calculator");
+       layout = new FlowLayout();
+       //get content Pane and set its layout 
+       cont = getContentPane();
+       cont.setLayout(layout);
+       //set up labels 
+       lblAmount = new JLabel("Enter the initial amount of a savings account:", SwingConstants.LEFT);
+       lblInterest = new JLabel("Enter the annual interest rate:", SwingConstants.LEFT);
+       lblYear = new JLabel("Enter the number of years:", SwingConstants.LEFT);
+       //set up text fields
+       txtAmount = new JTextField(10);
+       txtInterest = new JTextField(10);
+       txtYear = new JTextField(15);
+       txtBalance = new JTextField(35);
+       //set up button
+       btnCalc = new JButton("Calculate");
+       //add to container 
+       cont.add(lblAmount);
+       cont.add(txtAmount);
+       cont.add(lblInterest);
+       cont.add(txtInterest);
+       cont.add(lblYear);
+       cont.add(txtYear);
+       cont.add(btnCalc);
+       cont.add(txtBalance);
+       //register listener
+       btnCalc.addActionListener(this);
+       
+        setSize(400, 200);
+        setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+   }
+   
+   public void actionPerformed(ActionEvent e) {
+       double p = Double.parseDouble(txtAmount.getText());
+       double r = Double.parseDouble(txtInterest.getText());
+       int n = Integer.parseInt(txtYear.getText());
+       
+       if(e.getSource() == btnCalc)
+       {
+           double balance = p * Math.pow((1 + r), n);
+           txtBalance.setText("The balance of the savings account is RM: "+String.format("%.2f",balance));
+       }
+       else
+           System.exit(0);
+   }
+   
+   public static void main(String[]args) {
+       SavingsCalc demo = new SavingsCalc();
+   }
+}
